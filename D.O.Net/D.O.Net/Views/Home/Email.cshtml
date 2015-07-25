@@ -1,0 +1,49 @@
+﻿@model D.O.Net.Util.APIDadosAbertos.Result
+@{
+    ViewBag.Title = "Email";
+}
+<p>
+    Seguem atualizações referentes ao Diário Oficial nas categorias de sua preferência
+</p>
+@if (Model.records.Count() == 0)
+{
+    <p>As categorias selecionadas não possuem registros para essa semana.</p>
+}
+@foreach (var item in @Model.records)
+{
+    <h3>Título</h3>
+    <label>@item.titulo</label>
+
+    if (item.responsavel != "")
+    {
+        <h3>Responsável</h3>
+        <label>@item.responsavel</label>
+    }
+
+
+    <h3>Edição</h3>
+    <label>@item.edicao</label>
+
+    <h3>Data</h3>
+    <label>@String.Format("{0:dd/MM/yyyy}", item.data)</label>
+
+    <h3>Caderno</h3>
+    <label>Caderno: @item.caderno</label>
+
+    <h3>Seção</h3>
+    <label>@item.secao</label>
+
+    <h3>Conteúdo</h3>
+    <label>@item.conteudo</label>
+
+    <br /><br /><br />
+    <hr />
+    <br />
+
+}
+
+<b>Equipe Diário Oficial Net</b>
+<br />
+<a href="http://tinypic.com?ref=11juk2e" target="_blank">
+    <img src="http://i57.tinypic.com/11juk2e.jpg" border="0" alt="Diário Oficial Net">
+</a>

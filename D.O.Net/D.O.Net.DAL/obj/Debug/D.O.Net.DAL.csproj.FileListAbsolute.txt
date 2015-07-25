@@ -1,0 +1,12 @@
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\D.O.Net.DAL.dll.config
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\D.O.Net.DAL.dll
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\D.O.Net.DAL.pdb
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\D.O.Net.Entidades.dll
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\EntityFramework.dll
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\EntityFramework.SqlServer.dll
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\D.O.Net.Entidades.pdb
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\EntityFramework.xml
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\bin\Debug\EntityFramework.SqlServer.xml
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\obj\Debug\D.O.Net.DAL.csprojResolveAssemblyReference.cache
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\obj\Debug\D.O.Net.DAL.dll
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.DAL\obj\Debug\D.O.Net.DAL.pdb

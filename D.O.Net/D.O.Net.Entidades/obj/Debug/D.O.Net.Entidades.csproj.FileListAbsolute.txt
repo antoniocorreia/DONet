@@ -1,0 +1,4 @@
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.Entidades\bin\Debug\D.O.Net.Entidades.dll
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.Entidades\bin\Debug\D.O.Net.Entidades.pdb
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.Entidades\obj\Debug\D.O.Net.Entidades.dll
+d:\users\antonio\documents\visual studio 2013\Projects\D.O.Net\D.O.Net.Entidades\obj\Debug\D.O.Net.Entidades.pdb

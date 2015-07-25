@@ -1,0 +1,36 @@
+﻿@model D.O.Net.Models.News
+
+
+@using (Html.BeginForm("RegitroUsuario", "Home", FormMethod.Post))
+{
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Tags de interesse</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var item in Model.listInteresses)
+        {
+           <input id="@item.descricao" type="checkbox" value="true" name="@item.descricao" />
+           <input type="hidden" value="false" name="Remember" />
+        }
+      
+    </div>
+    <br />
+    <div class="row">
+        <div class="form-group">
+            <label for="exampleInputEmail2">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@gmail.com">
+            @Html.EditorFor(x=>x.Email)
+            <br />
+            <button type="submit" class="btn btn-primary btn-lg">Registrar</button>
+        </div>
+    </div>
+
+
+</div>
+}

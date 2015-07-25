@@ -1,0 +1,157 @@
+﻿@model D.O.Net.Models.News
+@{
+    ViewBag.Title = "Home Page";
+    IList<D.O.Net.Entidades.Tag> listaTag = ViewBag.Tags;
+}
+
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>Diário Oficial Net</h1>
+            <hr>
+            @*<p>Receba notificações por e-mail!</p>*@
+            <a href="#about" class="btn btn-primary btn-xl page-scroll">Como funciona</a>
+            <a href="#News" class="btn btn-primary btn-xl page-scroll">Inscrição</a>
+            <a href="#busca" class="btn btn-primary btn-xl page-scroll">Busca Avançada</a>
+        </div>
+    </div>
+</header>
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">O Diário de uma forma descomplicada</h2>
+                <hr class="light">
+                <p class="text-faded">Receba atualizações por e-mail com a frequência que deseja e relacionados a temas de sua preferência.</p>
+                <a href="#News" class="btn btn-default btn-xl page-scroll">Inscrição</a>
+                <br />
+                <br />
+                <p class="text-faded">O Diário Oficial Net está integrado com a API do Portal de dados abertos da Prefeitura de Recife para disponibilizar ao seu usuário uma melhor experiência na busca por informações no Diário Oficial</p>
+                <a href="#busca" class="btn btn-default btn-xl page-scroll">Busca</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Fique por dentro de todo material do Diário Oficial</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-4 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-envelope wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                    <h3>Notificações</h3>
+                    <p class="text-muted">Receba atualizações por e-mail de novos registros no Diário Oficial relacionados a temas de sua preferência.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-search wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                    <h3>Pesquisa avançada</h3>
+                    <p class="text-muted">Busca mais efetiva, por período, tipos de documento, edição e outros</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                    <h3>Base atualizada</h3>
+                    <p class="text-muted">Informações direto do portal de dados abertos da Prefeitura de Recife.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2>Receba atualizações de documentos de acordo com seu interesse</h2>
+            
+        </div>
+    </div>
+</aside>
+<section id="News">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Notificações</h2>
+                    <h4>Escolha as categorias para receber e-mails com atualizações</h4>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        @using (Html.BeginForm("RegitroUsuario", "Home", FormMethod.Post))
+        {
+            foreach (var item in listaTag)
+            {
+                <input type="checkbox" name="tag" value="@item.TagID" id="@item.TagID" />
+                <label for="@item.Descricao"> @item.Descricao</label>
+                <br />
+            }
+            <br />
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputEmail2">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" name="Email" placeholder="antonio@gmail.com">
+
+                    <br />
+                    <button type="submit" class="btn btn-primary btn-lg btn-progress">Registrar</button>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2>Ou procure pelo que você quer!</h2>
+            
+        </div>
+    </div>
+</aside>
+<section id="busca">
+
+    @Html.Partial("Busca")
+
+</section>
+<aside class="bg-primary">
+    <div class="container text-center">
+        <div class="call-to-action">
+
+            
+        </div>
+    </div>
+</aside>
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Equipe</h2>
+                <hr class="primary">
+                <p class="text-left">Antonio Alves Correia</p>
+                <p class="text-left">Felipe de Almeida Guimarães</p>
+            </div>
+
+          
+        </div>
+    </div>
+</section>
+<!-- jQuery -->
+<script src="~/Content/startbootstrap-creative-1.0.1/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="~/Content/startbootstrap-creative-1.0.1/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="~/Content/startbootstrap-creative-1.0.1/js/jquery.easing.min.js"></script>
+<script src="~/Content/startbootstrap-creative-1.0.1/js/jquery.fittext.js"></script>
+<script src="~/Content/startbootstrap-creative-1.0.1/js/wow.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="~/Content/startbootstrap-creative-1.0.1/js/creative.js"></script>

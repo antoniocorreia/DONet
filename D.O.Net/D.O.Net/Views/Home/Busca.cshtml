@@ -1,0 +1,112 @@
+﻿<div class="container">
+    @using (Html.BeginForm("BuscaAvancada", "Home", FormMethod.Post))
+    {
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Ano(s):</label>
+                    <select class="js-example-basic-multiple form-control" multiple="multiple">
+
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+
+
+                    </select>
+
+                    <script>
+                        $(".js-example-basic-multiple").select2({
+                            placeholder: "Todos"
+                        });
+                    </script>
+
+                </div>
+            </div>
+            <br />
+
+
+            <div class="row">
+                <div class='col-sm-6'>
+                    <label>Tipo de documento Ex.: Leis, decretos, resoluções</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Tipo de documento" name="tipodocumento">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class='col-sm-3'>
+                    <label>Responsável</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Responsável" name="responsavel">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+                <div class='col-sm-3'>
+                    <label>Título</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Título" name="titulo">
+                    </div>
+                </div>
+
+
+                <div class='col-sm-2'>
+                    <label>Edição</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Edição" name="edicao">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class='col-sm-3'>
+                    <label>Seção</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Seção" name="secao">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class='col-sm-3'>
+                    <label>Caderno</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Caderno" name="caderno">
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">Buscar</button>
+
+            @*<button type="submit" class="btn btn-primary btn-lg">Salvar PDF</button>*@
+
+
+
+
+
+        </div>
+    }
+
+
+</div>
